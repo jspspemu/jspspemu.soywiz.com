@@ -1,0 +1,31 @@
+{
+  "name": "jspspemu",
+  "description": "javascript psp emulator http://jspspemu.com/",
+  "version": "0.0.1",
+  "author": "Carlos Ballesteros <cballesterosvelasco@gmail.com> (http://cballesterosvelasco.es/)",
+  "contributors": [ 
+  ],
+  "dependencies": {
+    "mocha": "2.2.4",
+    "chai": "2.3.0"
+  },
+  "devDependencies": {
+  },
+  "homepage": "https://github.com/jspspemu/jspspemu",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jspspemu/jspspemu.git"
+  },
+  "scripts": {
+	"start": "node --harmony source/utils/http_server.js",
+    "setup": "npm install; npm -g install typescript; npm -g install mocha",
+    "build": "node --harmony source/utils/build_singleton.js",
+    "benchmark": "node jspspemu_headless.js data/benchmark/benchmark.prx",
+    "test": "mocha jspspemu_tests.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "*"
+  }
+}
